@@ -1,0 +1,42 @@
+/* This is a CSS file */
+
+.calc{
+    margin-top: 10%;
+    padding-top: 2%;
+    background-color:black;
+    width: 300px;
+    height: 400px;
+    border-radius: 15px;
+    padding:20px;
+}
+#visor{
+    width: 100%;
+    text-align: right;
+    height: 50px;
+    font-size: 40px;
+    border:none;
+    background-color: #c6c6c6;
+    color: black;
+}
+.btn{
+    margin-top: 10px;
+    width:100%;
+    height: 50px;
+    font-size: 20px;
+    transition:0.5s;
+}
+
+#visor::placeholder {
+  color: black;
+}
+
+.btn:hover{
+    color:black;
+    border:#a02a26;
+    transition:0.5s;
+}
+.igual{
+  height: 80px;
+  width: 50px;
+
+}
