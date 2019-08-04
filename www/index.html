@@ -31,52 +31,52 @@
                         <button class="btn btn-danger numero" value="8">8</button>
                     </div>
                     <div class="col-xs-3">
-                        <button class="btn btn-danger" onclick="numero(9)">9</button>
+                        <button class="btn btn-danger numero" value="9">9</button>
                     </div>
                     <div class="col-xs-3">
-                        <button class="btn btn-default" onclick="operadores('/')">÷</button>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-xs-3">
-                        <button class="btn btn-danger" onclick="numero(4)">4</button>
-                    </div>
-                    <div class="col-xs-3">
-                        <button class="btn btn-danger" onclick="numero(5)">5</button>
-                    </div>
-                    <div class="col-xs-3">
-                        <button class="btn btn-danger" onclick="numero(6)">6</button>
-                    </div>
-                    <div class="col-xs-3">
-                        <button class="btn btn-default" onclick="operadores('*')">x</button>
+                        <button class="btn btn-default operador" value="/">÷</button>
                     </div>
                 </div>
                 
                 <div class="row">
                     <div class="col-xs-3">
-                        <button class="btn btn-danger" onclick="numero(1)">1</button>
+                        <button class="btn btn-danger numero" value="4">4</button>
                     </div>
                     <div class="col-xs-3">
-                        <button class="btn btn-danger" onclick="numero(2)">2</button>
+                        <button class="btn btn-danger numero" value="5">5</button>
                     </div>
                     <div class="col-xs-3">
-                        <button class="btn btn-danger" onclick="numero(3)">3</button>
+                        <button class="btn btn-danger numero" value="6">6</button>
                     </div>
                     <div class="col-xs-3">
-                        <button class="btn btn-default" onclick="operadores('-')">-</button>
+                        <button class="btn btn-default operador" value="*">x</button>
                     </div>
                 </div>
                 
                 <div class="row">
                     <div class="col-xs-3">
-                        <button class="btn btn-danger" onclick="numero(0)">0</button>
+                        <button class="btn btn-danger numero" value="1">1</button>
+                    </div>
+                    <div class="col-xs-3">
+                        <button class="btn btn-danger numero" value="2">2</button>
+                    </div>
+                    <div class="col-xs-3">
+                        <button class="btn btn-danger numero" value="3">3</button>
+                    </div>
+                    <div class="col-xs-3">
+                        <button class="btn btn-default operador" value="-">-</button>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-3">
+                        <button class="btn btn-danger numero" value="0">0</button>
                     </div>
                     <div class="col-xs-3">
                         <button class="btn btn-danger" onclick="ponto(.)">.</button>
                     </div>
                     <div class="col-xs-3">
-                        <button class="btn btn-danger" onclick="operadores('+')">+</button>
+                        <button class="btn btn-danger operador" value="+">+</button>
                     </div>
                     <div class="col-xs-3">
                         <button class="btn btn-warning" onclick="limparTudo()">C</button>
@@ -86,13 +86,13 @@
 
                 <div class="row">
                   <div class="col-xs-3">
-                	  <button class="btn btn-danger" onclick="operadores('%')">%</button>
+                	  <button class="btn btn-danger operador" value="%">%</button>
                   </div>
                   <div class="col-xs-3">
-                	  <button class="btn btn-danger" onclick="operadores('^')">^</button>
+                	  <button class="btn btn-danger operador" value="^">^</button>
                   </div>
                   <div class="col-xs-3">
-                	  <button class="btn btn-danger" onclick="operadores('r')">√</button>
+                	  <button class="btn btn-danger operador" value="r">√</button>
                   </div>
                   <div class="col-xs-3">
                 	  <button class="btn btn-warning" onclick="limparUm()">CE</button>
@@ -101,7 +101,7 @@
                 
                 <div class="row">
                     <div class="col-xs-12">                        
-                         <button class="btn btn-success form-control" onclick="igual('=')">=</button>
+                         <button class="btn btn-success form-control" id="igual">=</button>
                     </div>
                 </div>
 
@@ -110,12 +110,6 @@
     </body>
 
 </html>
-
-<script type="text/javascript">
-	
-
-
-</script>
 
 <style type="text/css">
 	
