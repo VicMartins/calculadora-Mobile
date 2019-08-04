@@ -50,12 +50,50 @@ $(document).on('click','#igual',function(){
           resultado = resultado * potencia;
         }
         break;
-      case "r":
-        
-        break;
       case "%":
+        resultado = (valor1 * valor2) / 100;
         break;
     }
 
     $("#visor").val(resultado);
 });
+
+$(document).on('click','#raiz',function(){
+    //GRAVA VALOR DO VISOR NA VARIAVEL VALOR1
+    valor1 = parseFloat($("#visor").val());
+    //VARIAVEL ONDE FICARA O RESULTADO FINAL
+    var resultado = 0;
+    //CALCULA RAIZ QUADRADA DO VALOR1
+    resultado = Math.sqrt(valor1);
+    //EXIBE RESULTADO NO VISOR
+    $("#visor").val(resultado);
+});
+
+//FUNÇÃO DE LIMPAR TUDO
+  $(document).on('click','#C',function(){
+      $("#visor").val("");
+      valor1 = 0;
+      valor2 = 0;
+      operador = "";
+  }); 
+
+//FUNÇÃO DE LIMPAR UM
+  $(document).on('click','#CE',function(){
+      $("#visor").val("");
+  }); 
+
+//ADD PONTO
+  $(document).on('click','#ponto',function(){
+    var visor = $("#visor").val();
+    
+    if(visor == ""){
+        $("#visor").val("0.");
+    }
+    else{
+        if(visor.includes(".")){
+            
+        }else{
+            $("#visor").val(visor + ".");
+        }
+    }
+  });
