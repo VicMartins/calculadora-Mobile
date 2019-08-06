@@ -1,6 +1,7 @@
 var valor1 = 0;
 var valor2 = 0;
 var operador = "";
+var sinal = true;
 
 //ADD NUMERO NO VISOR
 $(document).on('click','.numero',function(){
@@ -10,15 +11,23 @@ $(document).on('click','.numero',function(){
     var visorValue = $("#visor").val();
     //ALTERA VALOR DO VISOR (VALOR DO VISOR + VALOR A SER ADICIONADO)
     $("#visor").val(visorValue + valor);
+
 });
 
 $(document).on('click','.operador',function(){
-    //GRAVA VALOR DO VISOR NA VARIAVEL VALOR1
+   if( sinal == true){
+      //GRAVA VALOR DO VISOR NA VARIAVEL VALOR1
     valor1 = parseFloat($("#visor").val());
     //GRAVA OPERADOR A SER USADO NA VARIAVEL OPERADOR
     operador = this.value;
     //LIMPA VISOR
     $("#visor").val('');
+    sinal = false;
+   }
+   else if(($("#visor").val()) == "" && operador == "-"){
+     $("#visor").val('-');
+     sinal = true
+   }
 });
 
 $(document).on('click','#igual',function(){
@@ -27,7 +36,7 @@ $(document).on('click','#igual',function(){
 
     //VARIAVEL DO TIPO INT ONDE SERA GUARDADO O RESULTADO
     var resultado = 0;
-
+    sinal = true;
     //VERIFICA OPERAÇÃO A SER FEITA
     switch(operador){
       case "+":
@@ -75,6 +84,7 @@ $(document).on('click','#raiz',function(){
       valor1 = 0;
       valor2 = 0;
       operador = "";
+      sinal = true;
   }); 
 
 //FUNÇÃO DE LIMPAR UM
@@ -97,3 +107,4 @@ $(document).on('click','#raiz',function(){
         }
     }
   });
+ 
